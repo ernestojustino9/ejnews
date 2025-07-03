@@ -2,6 +2,8 @@ import { Module } from "@nestjs/common";
 import { PostModule } from "./post/post.module";
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { ConfigModule } from "@nestjs/config";
+import { CategoriaModule } from './categoria/categoria.module';
+import { PosthistoricoModule } from './posthistorico/posthistorico.module';
 
 @Module({
   imports: [
@@ -18,6 +20,8 @@ import { ConfigModule } from "@nestjs/config";
       synchronize: true,
     }),
     PostModule,
+    CategoriaModule,
+    PosthistoricoModule,
   ],
   controllers: [],
   providers: [],
